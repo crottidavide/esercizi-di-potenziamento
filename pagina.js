@@ -22,6 +22,12 @@ function saluta() {
           
 
     }
+     else if (genere === "non binario") {
+         messaggio.innerHTML = "benvenut*! " + nome;
+         messaggio.style.border = "3px dashed lightgrey";
+          
+
+    }
 }
 //esercizio3
 let contatore=0;
@@ -42,4 +48,22 @@ if (contatore<0){
     document.getElementById("numero").style.color="red";
 }
 
+}
+//esercizio2
+function confronta() {
+    
+    let num1 = Number(document.getElementById("input1").value);
+    let num2 = Number(document.getElementById("input2").value);
+
+    if (Number(num1) > Number(num2)) {
+       
+        document.getElementById("quadrato1").style.backgroundColor = "green";
+        document.getElementById("quadrato2").style.backgroundColor = "white";
+    } else if (Number(num2) > Number(num1)) {
+        document.getElementById("quadrato2").style.backgroundColor = "green";
+        document.getElementById("quadrato1").style.backgroundColor = "grey";
+    } else {
+        document.getElementById("quadrato1").style.backgroundColor = "yellow";
+        document.getElementById("quadrato2").style.backgroundColor = "yellow";
+    }
 }
