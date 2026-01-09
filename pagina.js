@@ -23,13 +23,23 @@ function saluta() {
 
     }
 }
-let numero = 0;
+//esercizio3
 let contatore=0;
 function aumentanumero() {
-numero=numero+1 
-contatore=contatore+1  
+   contatore=contatore+1  
+document.getElementById("numero").innerHTML = contatore;
+if (contatore>=1){
+    document.getElementById("numero").style.color="green";
+} 
+
 }
+
+
 function diminuiscinumero() {
-    numero=numero-1 
-contatore=contatore-1
+   contatore=contatore-1
+document.getElementById("numero").innerHTML = contatore;
+if (contatore<0){
+    document.getElementById("numero").style.color="red";
+}
+
 }
