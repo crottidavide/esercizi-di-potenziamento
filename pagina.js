@@ -36,19 +36,26 @@ function aumentanumero() {
 document.getElementById("numero").innerHTML = contatore;
 if (contatore>=1){
     document.getElementById("numero").style.color="green";
-} 
 
+} 
+else if (contatore==0){
+    document.getElementById("numero").style.color="black";
+}
 }
 
 
 function diminuiscinumero() {
-   contatore=contatore-1
+ contatore=contatore-1
 document.getElementById("numero").innerHTML = contatore;
 if (contatore<0){
     document.getElementById("numero").style.color="red";
 }
-
+else if (contatore==0){
+    document.getElementById("numero").style.color="black";
 }
+}
+  
+
 //esercizio2
 function confronta() {
     
@@ -67,3 +74,20 @@ function confronta() {
         document.getElementById("quadrato2").style.backgroundColor = "yellow";
     }
 }
+//esercizio4
+function generaTabellina() {
+    
+    let n = Number(document.getElementById("numeroTabellina").value);
+    let lista = document.getElementById("listaRisultati");
+
+    
+    lista.innerHTML = "";
+
+   
+    for (let i = 1; i <= 10; i++) {
+        let risultato = n * i;
+        
+        lista.innerHTML += "<li>" + n + " x " + i + " = " + risultato + "</li>";
+    }
+}
+    
